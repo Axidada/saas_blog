@@ -1,0 +1,36 @@
+server:
+  port: 9002
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 800
+    min-spare-threads: 30
+    max-connections: 10000
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: ihrm-system  #指定服务名
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://101.133.168.119:3306/ihrm?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: ihrm
+    password: yZtmTaAyKww75pMN
+  #3.JPA
+  jpa:
+    database: MySQL
+    show-sql: true
+    open-in-view: true
+  redis:
+    host: 127.0.0.1
+    port: 16379
+jwt:
+  config:
+    key: easy
+    ttl: 3600000
+
+
